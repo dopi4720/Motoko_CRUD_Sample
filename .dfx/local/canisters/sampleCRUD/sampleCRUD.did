@@ -1,0 +1,12 @@
+type Account = 
+ service {
+   getId: () -> (nat);
+   getName: () -> (text);
+   setId: (nat) -> ();
+   setName: (text) -> ();
+ };
+service : {
+  addAccount: (nat, text) -> ();
+  getAccount: (nat) -> (opt Account) query;
+  greet: (text) -> (text);
+}
